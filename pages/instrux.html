@@ -1,44 +1,80 @@
-<div id="main" ng-controller="InstruxController">
-    <a href="#/home" class="small">Home</a>
-    <section id="one">
-        <header class="major">
-            <h2>Instrux Media</h2>
-        </header>
-        <div class="row">
-            <div class="12u$">
-                <p>Web Programmer</p>
-                <p><em>November 9th, 2015 - present</em></p>
-
-                <br />
-
-                <p><strong>Languages and technologies:</strong></p>
-                <ul>
-                    <li>PHP 5.6 and AngularJS 1.5.8</li>
-                    <li>HTML, CSS, JavaScript, jQuery, AJAX and JSON</li>
-                    <li>CakePHP 3.2</li>
-                    <li>NetBeans IDE</li>
-                    <li>Adobe Dreamweaver CC</li>
-                    <li>Web Experience Toolkit (WET-BOEW) 4</li>
-                    <li>phpMyAdmin</li>
-                    <li>MySQL</li>
-                    <li>Bootstrap 3 and Material Design Lite (MDL)</li>
-                    <li>Subversion</li>
-                </ul>
-
-                <p><strong>Responsibilities:</strong></p>
-                <ul>
-                    <li>Development of core internal infrastructure using PHP, MySQL and OpenLDAP.</li>
-                    <li>Migration of existing tools into CakePHP framework.</li>
-                    <li>Development of internal tools and applications using PHP, HTML, CSS, JavaScript and jQuery.</li>
-                    <li>Development of database logic and database systems using MySQL and phpMyAdmin.</li>
-                    <li>Development and maintenance of business logic and web services using PHP, and JSON.</li>
-                    <li>Development and maintenance of client reporting and communication tools using AngularJS.</li>
-                    <li>Development of accessible User Interface (UI) elements that meet WCAG 2.0.</li>
-                    <li>Development of Adobe Dreamweaver templates for production team members.</li>
-                    <li>Implementation of e-Learning course content using HTML, CSS, JavaScript and jQuery.</li>
-                    <li>Troubleshooting issues with internal applications and e-Learning course framework.</li>
-                </ul>
-            </div>
+<!DOCTYPE html>
+<section class="section">
+    <a href="#/home" ng-click="hideArea()" class="close"><i class="fa fa-times"></i></a>
+    <div class="row">
+        <div class="12u$">
+            <p class="blurb">
+            </p>
+            <p><strong>Responsibilities:</strong></p>
+            <ul>
+                <li>Development of internal infrastructure using PHP, MySQL and OpenLDAP.</li>
+                <li>Maintenance and creation of company user accounts using OpenLDAP.</li>
+                <li>Development of web tools and applications using PHP, HTML, CSS, JavaScript and jQuery.</li>
+                <li>Migration of existing tools into CakePHP web framework.</li>
+                <li>Development of database logic and database systems using MySQL and phpMyAdmin.</li>
+                <li>Development and maintenance of business logic and internal reporting API using PHP, and JSON.</li>
+                <li>Development and maintenance of client reporting and communication tools using AngularJS.</li>
+                <li>Development of accessible User Interface (UI) elements that meet Web Content Accessibility Guidelines (WCAG) 2.0.</li>
+                <li>Development of Adobe Dreamweaver templates for production team members.</li>
+                <li>Implementation of e-Learning course content using HTML, CSS, JavaScript and jQuery.</li>
+                <li>Troubleshooting issues with internal applications and e-Learning course framework.</li>
+            </ul>
         </div>
-    </section>
-</div>
+    </div>
+    <div class="row">
+        <div class="12u$">
+            <p><strong>Projects and Galleries:</strong></p>
+            <div class="row">
+                <article class="3u 6u(small) 12u$(xsmall) work-item" app-gallery="" gallery="instrux-general">
+                    <a href="images/gallery/instrux-general/xmas-2015.jpg" title="Christmas 2015" class="image fit thumb instrux-general"><img src="images/gallery/instrux-general/gallery-thumb.jpg" alt="" /></a>
+                    <div class="hide">
+                        <a href="images/gallery/instrux-general/escape-manor-2016.jpg" title="Escape Manor 2016" class="instrux-general"></a>
+                        <a href="images/gallery/instrux-general/standing-workstation.jpg" title="Standing Workstation" class="instrux-general"></a>
+                        <a href="images/gallery/instrux-general/summer-2016.jpg" title="Summer 2016" class="instrux-general"></a>
+                        <a href="images/gallery/instrux-general/crazy-hat-2016.jpg" title="Hat Day 2016" class="instrux-general"></a>
+                        <a href="images/gallery/instrux-general/halloween-2016.jpg" title="Halloween 2016" class="instrux-general"></a>
+                    </div>
+                    <h3>General (6)</h3>
+                    <p>Good times with Instrux Media</p>
+                </article>
+                <article class="3u 6u$(small) 12u$(xsmall) work-item" app-gallery="" gallery="instrux-status">
+                    <a href="images/gallery/instrux-status/login.jpg" class="image fit thumb instrux-status"><img src="images/gallery/instrux-status/gallery-thumb.jpg" alt="" /></a>
+                    <div class="hide">
+                        <a href="images/gallery/instrux-status/projects.jpg" class="instrux-status"></a>
+                        <a href="images/gallery/instrux-status/loading.jpg" class="instrux-status"></a>
+                        <a href="images/gallery/instrux-status/project-01.jpg" class="instrux-status"></a>
+                        <a href="images/gallery/instrux-status/project-02.jpg" class="instrux-status"></a>
+                        <a href="images/gallery/instrux-status/project-03.jpg" class="instrux-status"></a>
+                        <a href="images/gallery/instrux-status/project-04.jpg" class="instrux-status"></a>
+                        <a href="images/gallery/instrux-status/project-05.jpg" class="instrux-status"></a>
+                        <a href="images/gallery/instrux-status/project-06.jpg" class="instrux-status"></a>
+                        <a href="images/gallery/instrux-status/feedback.jpg" class="instrux-status"></a>
+                    </div>
+                    <h3>Client Status Application (10)</h3>
+                    <p>Client communication tool built with <a href="https://angularjs.org/" target="_blank">AngularJS</a> and <a href="https://getmdl.io/" target="_blank">Material Design Lite</a></p>
+                </article>
+                <article class="3u 6u(small) 12u$(xsmall) work-item" app-gallery="" gallery="instrux-management">
+                    <a href="images/gallery/instrux-management/outboard.jpg" class="image fit thumb instrux-management"><img src="images/gallery/instrux-management/gallery-thumb.jpg" alt="" /></a>
+                    <div class="hide">
+                        <a href="images/gallery/instrux-management/projects.jpg" class="instrux-management"></a>
+                        <a href="images/gallery/instrux-management/app-config.jpg" class="instrux-management"></a>
+                        <a href="images/gallery/instrux-management/app-config-edit.jpg" class="instrux-management"></a>
+                        <a href="images/gallery/instrux-management/project.jpg" class="instrux-management"></a>
+                        <a href="images/gallery/instrux-management/users.jpg" class="instrux-management"></a>
+                        <a href="images/gallery/instrux-management/outboard-tv.jpg" class="instrux-management"></a>
+                    </div>
+                    <h3>Internal Application (7)</h3>
+                    <p>Internal portal built with <a href="https://cakephp.org/" target="_blank">CakePHP</a>, <a href="https://www.mysql.com/" target="_blank">MySQL</a>, <a href="http://www.openldap.org/" target="_blank">OpenLDAP</a> and <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a></p>
+                </article>
+                <article class="3u$ 6u$(small) 12u$(xsmall) work-item">
+                    <a href="#instrux" class="image fit thumb"><img src="images/gallery/instrux-interactions/gallery-thumb.png" alt="" /></a>
+                    <div class="hide">
+                    </div>
+                    <h3>Accessible Interactions (0)</h3>
+                    <p>Interactions developed with HTML, CSS and JavaScript to meet <a href="https://www.w3.org/TR/WCAG20/" target="_blank">WCAG 2.0 AA</a></p>
+                </article>
+            </div>
+            <div class="approval"><sub><em>All images and screenshots used with permission.</em></sub></div>
+        </div>
+    </div>
+</section>

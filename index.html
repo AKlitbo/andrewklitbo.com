@@ -1,25 +1,273 @@
 <!DOCTYPE html>
-<html ng-app="personalSite" ng-controller="MasterController">
+<html lang="en" ng-app="personalSite">
 
 <head>
-    <title ng-if="!page_title">Andrew Klitbo | Personal Website</title>
-    <title ng-if="page_title">{{page_title}}</title>
+    <title>Andrew Klitbo | Personal Website</title>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic" rel="stylesheet" type="text/css">
-    <link href="css/site.css" rel="stylesheet" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/site.min.css" rel="stylesheet" type="text/css">
 </head>
 
 <body id="top">
     <header id="header">
-        <div class="image avatar"><img alt="" src="images/avatar.jpg"></div>
+        <div class="image avatar"><img alt="" src="images/avatar.jpg" /></div>
         <h1><strong>My name is Andrew Klitbo.</strong><br />
         I am a Web Developer living in the Ottawa<br />
         region, and this is my development playground.</h1>
     </header>
-    <div ng-view>
-
+    <div id="main">
+        <div ng-controller="MasterController">
+            <section id="one">
+                <header class="major">
+                    <h2><i class="fa fa-briefcase"></i> Employment</h2>
+                </header>
+                <!-- Instrux Media Desktop -->
+                <div class="row not-small">
+                    <div class="9u">
+                        <div class="unstyled">
+                            <ul>
+                                <li><strong>Instrux Media</strong></li>
+                                <li>Web Programmer</li>
+                                <li><em>November 9th, 2015 - present</em></li>
+                                <li><a href="#/instrux" ng-click="showArea('instrux')">Details <i ng-class="{'fa-chevron-up': includeArea === 'instrux', 'fa-chevron-down': includeArea !== 'instrux'}" class="fa"></i></a> | <a href="https://www.instruxmedia.com/"
+                                        target="_blank">Company Website <i class="fa fa-external-link"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="3u$">
+                        <div class="image fit">
+                            <img alt="" src="images/logos/instrux-logo.png" />
+                        </div>
+                    </div>
+                </div>
+                <!-- Instrux Media Mobile -->
+                <div class="row only-small" style="margin-bottom: 10px;">
+                    <div class="3u">
+                        <div class="image fit"><img alt="" src="images/logos/instrux-logo-sm.png" /></div>
+                    </div>
+                    <div class="9u$">
+                        <strong>Instrux Media</strong>
+                        <br /> Web Programmer
+                        <br />
+                        <em>November 9th, 2015 - present</em>
+                        <br />
+                        <a href="#/instrux" ng-click="showArea('instrux')">Details <i ng-class="{'fa-chevron-up': includeArea === 'instrux', 'fa-chevron-down': includeArea !== 'instrux'}" class="fa"></i></a> | <a href="https://www3.instruxmedia.com/"
+                            target="_blank">Company Website <i class="fa fa-external-link"></i></a>
+                    </div>
+                </div>
+                <!-- Instrux Media Details -->
+                <div class="row">
+                    <div class="12u$">
+                        <div id="instrux" ng-show="toggleArea('instrux')" style="background-color:#e8f7f5;">
+                            <ng-include src="'pages/instrux.html'"></ng-include>
+                        </div>
+                    </div>
+                </div>
+                <!-- ESDC Desktop-->
+                <div class="row not-small">
+                    <div class="9u">
+                        <div class="unstyled">
+                            <ul>
+                                <li><strong>Employment and Social Development Canada</strong></li>
+                                <li>Web Developer</li>
+                                <li><em>January 6th, 2014 - August 28th, 2015</em></li>
+                                <li><a href="#/esdc" ng-click="showArea('esdc')">Details <i ng-class="{'fa-chevron-up': includeArea === 'esdc', 'fa-chevron-down': includeArea !== 'esdc'}" class="fa"></i></a> | <a href="http://www.esdc.gc.ca/eng/communities/homelessness/nhis/index.shtml"
+                                        target="_blank">Company Website <i class="fa fa-external-link"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="3u$">
+                        <div class="image fit">
+                            <img alt="" src="images/logos/esdc-logo.png" />
+                        </div>
+                    </div>
+                </div>
+                <!-- ESDC Mobile -->
+                <div class="row only-small" style="margin-bottom: 10px;">
+                    <div class="3u">
+                        <div class="image fit"><img alt="" src="images/logos/esdc-logo-sm.png" /></div>
+                    </div>
+                    <div class="9u$">
+                        <strong>Employment and Social Development Canada</strong>
+                        <br /> Web Developer
+                        <br />
+                        <em>January 6th, 2014 - August 28th, 2015</em>
+                        <br />
+                        <a href="#/esdc" ng-click="showArea('esdc')">Details <i ng-class="{'fa-chevron-up': includeArea === 'esdc', 'fa-chevron-down': includeArea !== 'esdc'}" class="fa"></i></a> | <a href="http://www.esdc.gc.ca/eng/communities/homelessness/nhis/index.shtml"
+                            target="_blank">Company Website <i class="fa fa-external-link"></i></a>
+                    </div>
+                </div>
+                <!-- ESDC Details -->
+                <div class="row">
+                    <div class="12u$">
+                        <div id="esdc" ng-show="toggleArea('esdc')" style="background-color:#e8f7f5;">
+                            <ng-include src="'pages/esdc.html'"></ng-include>
+                        </div>
+                    </div>
+                </div>
+                <!-- Algonquin ITS Desktop -->
+                <div class="row not-small">
+                    <div class="9u">
+                        <div class="unstyled">
+                            <ul>
+                                <li><strong>Algonquin College</strong></li>
+                                <li>Client Service Representative</li>
+                                <li><em>September 3rd, 2013 - December 13th, 2013</em></li>
+                                <li><a href="#/its" ng-click="showArea('its')">Details <i ng-class="{'fa-chevron-up': includeArea === 'its', 'fa-chevron-down': includeArea !== 'its'}" class="fa"></i></a> | <a href="http://www.algonquincollege.com/its/" target="_blank">Company Website <i class="fa fa-external-link"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="3u$">
+                        <div class="image fit">
+                            <img alt="" src="images/logos/algonquin-logo.png" />
+                        </div>
+                    </div>
+                </div>
+                <!-- Algonquin ITS Mobile -->
+                <div class="row only-small" style="margin-bottom: 10px;">
+                    <div class="3u">
+                        <div class="image fit"><img alt="" src="images/logos/algonquin-logo-sm.png" /></div>
+                    </div>
+                    <div class="9u$">
+                        <strong>Algonquin College</strong>
+                        <br /> Client Service Representative
+                        <br />
+                        <em>September 3rd, 2013 - December 13th, 2013</em>
+                        <br />
+                        <a href="#/its" ng-click="showArea('its')">Details <i ng-class="{'fa-chevron-up': includeArea === 'its', 'fa-chevron-down': includeArea !== 'its'}" class="fa"></i></a> | <a href="http://www.algonquincollege.com/its/" target="_blank">Company Website <i class="fa fa-external-link"></i></a>
+                    </div>
+                </div>
+                <!-- Algonquin ITS Details -->
+                <div class="row">
+                    <div class="12u$">
+                        <div id="its" ng-show="toggleArea('its')" style="background-color:#e8f7f5;">
+                            <ng-include src="'pages/its.html'"></ng-include>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr />
+            <section id="two">
+                <header class="major">
+                    <h2><i class="fa fa-graduation-cap "></i> Education</h2>
+                </header>
+                <!-- Algonquin IAWD Desktop -->
+                <div class="row not-small" style="margin-bottom: 10px;">
+                    <div class="9u">
+                        <div class="unstyled">
+                            <ul>
+                                <li><strong>Algonquin College</strong></li>
+                                <li>Internet Applications and Web Development</li>
+                                <li><em>Class of 2015, Graduated with Honours</em></li>
+                                <li><a href="#/iawd" ng-click="showArea('iawd')">Details <i ng-class="{'fa-chevron-up': includeArea === 'iawd', 'fa-chevron-down': includeArea !== 'iawd'}" class="fa"></i></a> | <a href="https://xweb2.algonquincollege.com/Monograph/ft_programs/programOverview.aspx?year=2012&id=3002X01FWO&"
+                                        target="_blank">Program Archive <i class="fa fa-external-link"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="3u$">
+                        <div class="image fit">
+                            <img alt="" src="images/logos/algonquin-logo.png" />
+                        </div>
+                    </div>
+                </div>
+                <!-- Algonquin IAWD Mobile -->
+                <div class="row only-small" style="margin-bottom: 10px;">
+                    <div class="3u">
+                        <div class="image fit"><img alt="" src="images/logos/algonquin-logo-sm.png" /></div>
+                    </div>
+                    <div class="9u$">
+                        <strong>Algonquin College</strong>
+                        <br /> Internet Applications and Web Development
+                        <br />
+                        <em>Class of 2015, Graduated with Honours</em>
+                        <br />
+                        <a href="#/iawd" ng-click="showArea('iawd')">Details <i ng-class="{'fa-chevron-up': includeArea === 'iawd', 'fa-chevron-down': includeArea !== 'iawd'}" class="fa"></i></a> | <a href="http://www.algonquincollege.com/its/" target="_blank">Program Archive <i class="fa fa-external-link"></i></a>
+                    </div>
+                </div>
+                <!-- Algonquin IAWD Details -->
+                <div class="row">
+                    <div class="12u$">
+                        <div id="iawd" ng-show="toggleArea('iawd')" style="background-color:#e8f7f5;">
+                            <ng-include src="'pages/iawd.html'"></ng-include>
+                        </div>
+                    </div>
+                </div>
+                <!-- Algonquin Comp Sci Desktop -->
+                <div class="row not-small" style="margin-bottom: 10px;">
+                    <div class="9u">
+                        <div class="unstyled">
+                            <ul>
+                                <li><strong>Algonquin College</strong></li>
+                                <li>Computer Engineering Technology - Computing Science</li>
+                                <li><em>2011 – 2012</em></li>
+                                <li><a href="#/compsci" ng-click="showArea('compsci')">Details <i ng-class="{'fa-chevron-up': includeArea === 'compsci', 'fa-chevron-down': includeArea !== 'compsci'}" class="fa"></i></a> | <a href="https://xweb2.algonquincollege.com/Monograph/ft_programs/programOverview.aspx?year=2011&id=0006X01FWO&%20"
+                                        target="_blank">Program Archive <i class="fa fa-external-link"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="3u$">
+                        <div class="image fit">
+                            <img alt="" src="images/logos/algonquin-logo.png" />
+                        </div>
+                    </div>
+                </div>
+                <!-- Algonquin Comp Sci Mobile -->
+                <div class="row only-small" style="margin-bottom: 10px;">
+                    <div class="3u">
+                        <div class="image fit"><img alt="" src="images/logos/algonquin-logo-sm.png" /></div>
+                    </div>
+                    <div class="9u$">
+                        <strong>Algonquin College</strong>
+                        <br /> Computer Engineering Technology - Computing Science
+                        <br />
+                        <em>2011 – 2012</em>
+                        <br />
+                        <a href="#/compsci" ng-click="showArea('compsci')">Details <i ng-class="{'fa-chevron-up': includeArea === 'compsci', 'fa-chevron-down': includeArea !== 'compsci'}" class="fa"></i></a> | <a href="http://www.algonquincollege.com/its/"
+                            target="_blank">Program Archive <i class="fa fa-external-link"></i></a>
+                    </div>
+                </div>
+                <!-- Algonquin Comp Sci Details -->
+                <div class="row">
+                    <div class="12u$">
+                        <div id="compsci" ng-show="toggleArea('compsci')" style="background-color:#e8f7f5;">
+                            <ng-include src="'pages/compsci.html'"></ng-include>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <hr />
+        <div ng-controller="ContactController">
+            <header class="major">
+                <h2><i class="fa fa-envelope"></i> Contact</h2>
+            </header>
+            <div class="row">
+                <div class="12u$">
+                    <form ng-submit="submit()" name="form" role="form">
+                        <div class="row uniform 50%">
+                            <div class="6u 12u$(xsmall)">
+                                <input type="text" name="txtName" class="form-control" placeholder="Name" ng-model="formData.txtName" required>
+                            </div>
+                            <div class="6u$ 12u$(xsmall)">
+                                <input type="email" name="txtEmail" class="form-control" placeholder="Email" ng-model="formData.txtEmail" required>
+                            </div>
+                            <div class="12u$">
+                                <textarea type="text" name="txtMessage" class="form-control" ng-model="formData.txtMessage" placeholder="Message" required></textarea>
+                            </div>
+                        </div>
+                        <ul class="actions">
+                            <li>
+                                <button class="button" type="submit">Send Message</button>
+                                <div id="messages" style="display: inline-block; margin-left: 10px;" ng-show="message">{{ message }}</div>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
     <footer id="footer">
         <ul class="icons">
@@ -34,11 +282,11 @@
             </li>
         </ul>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.0/skel.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.0/skel-layout.min.js"></script>
-
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel-layout.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
+    <script src="js/jquery.colorbox.min.js"></script>
     <script src="js/app.js"></script>
 </body>
 
