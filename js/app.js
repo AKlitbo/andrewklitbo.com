@@ -54,12 +54,10 @@ personalSite.controller('MasterController', ['$scope', '$location', '$anchorScro
  * Contact Controller
  */
 personalSite.controller('ContactController', ['$scope', '$http', function($scope, $http) {
-    $scope.submitted = false;
     $scope.submitButtonDisabled = false;
     $scope.formData = {};
 
     $scope.submit = function() {
-        $scope.submitted = true;
         $scope.submitButtonDisabled = true;
         $http({
             method: 'POST',

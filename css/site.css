@@ -1474,10 +1474,6 @@ header.major h2 {
 
 /* Form */
 
-form {
-    margin: 0 0 2em 0;
-}
-
 label {
     color: #787878;
     display: block;
@@ -2133,8 +2129,9 @@ dl {
 @media screen and (max-width: 1280px) {
     /* Header */
     #header {
-        padding: 3em;
+        padding: 2em;
         width: 30%;
+        text-align: center;
     }
     #header h1 {
         font-size: 1.25em;
@@ -2144,7 +2141,8 @@ dl {
     }
     /* Footer */
     #footer {
-        padding: 0 3em 5em 3em;
+        text-align: center;
+        padding: 0 1em 1em 1em;
         width: 30%;
     }
     /* Main */
@@ -2196,13 +2194,13 @@ dl {
         background-size: auto, cover;
         bottom: auto;
         left: auto;
-        padding: 4em 4em 6em 4em;
+        padding: 2em 4em;
         position: relative;
         text-align: center;
         width: 100%;
     }
     #footer .icons {
-        margin: 0 0 1em 0;
+        /*margin: 0 0 1em 0;*/
     }
     /* Main */
     #main {
@@ -2249,7 +2247,7 @@ dl {
     }
     /* Footer */
     #footer {
-        padding: 2.25em 1.5em;
+        padding: 1.5em 1.5em;
     }
     /* Main */
     #main {
@@ -2267,7 +2265,7 @@ dl {
 @media screen and (max-width: 480px) {
     /* List */
     ul.actions {
-        margin: 0 0 2em 0;
+        /*margin: 0 0 2em 0;*/
     }
     ul.actions li {
         display: block;
@@ -2293,7 +2291,7 @@ dl {
     }
     /* Header */
     #header {
-        padding: 4.5em 1.5em;
+        padding: 2.5em 1.5em;
     }
     #header h1 br {
         display: none;

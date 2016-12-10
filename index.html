@@ -7,16 +7,16 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic" rel="stylesheet" type="text/css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css">
     <link href="css/site.min.css" rel="stylesheet" type="text/css">
 </head>
 
 <body id="top">
     <header id="header">
         <div class="image avatar"><img alt="" src="images/avatar.jpg" /></div>
-        <h1><strong>My name is Andrew Klitbo.</strong><br />
+        <h1><strong>I am Andrew Klitbo.<br />
         I am a Web Developer living in the Ottawa<br />
-        region, and this is my development playground.</h1>
+        region, and this is my website.</strong></h1>
     </header>
     <div id="main">
         <div ng-controller="MasterController">
@@ -260,7 +260,7 @@
                         </div>
                         <ul class="actions">
                             <li>
-                                <button class="button" type="submit">Send Message</button>
+                                <button class="button" type="submit" ng-disabled="submitButtonDisabled">Send Message</button>
                                 <div id="messages" style="display: inline-block; margin-left: 10px;" ng-show="message">{{ message }}</div>
                             </li>
                         </ul>
