@@ -1472,6 +1472,7 @@ header.major h2 {
     display: none;
 }
 
+
 /* Form */
 
 label {
@@ -1680,7 +1681,7 @@ input[type="radio"]+label:before {
     color: #49bf9d !important;
 }
 
- .button.icon {
+.button.icon {
     padding-left: 1.35em;
 }
 
@@ -1725,6 +1726,7 @@ input[type="radio"]+label:before {
     color: #b2b2b2 !important;
     cursor: default;
 }
+
 
 /* Image */
 
@@ -2303,8 +2305,9 @@ dl {
 /* Hide */
 
 .hide {
-	display: none;
+    display: none;
 }
+
 
 /* Font-Awesome Override */
 

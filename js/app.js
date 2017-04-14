@@ -2,7 +2,7 @@
  * AppJS
  *
  * @requires jQuery > 1.3.2 {@link https://code.jquery.com/ }
- * @requires AngularJS 1.5.8 {@link https://code.angularjs.org/1.5.8/angular.min.js }
+ * @requires AngularJS > 1.5 {@link https://code.angularjs.org/1.5.8/angular.min.js }
  * @requires Skel and Skel Layout 3.0.1 {@link https://github.com/ajlkn/skel }
  * @requires jQuery Colorbox {@link http://www.jacklmoore.com/colorbox/ } *
  * @author Andrew Klitbo
